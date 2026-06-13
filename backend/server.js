@@ -104,4 +104,14 @@ process.on('uncaughtException', (err) => {
   process.exit(1);
 });
 
-startServer();
+// Si on n'est pas sur Vercel (développement local ou Render), on démarre le serveur
+if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+  startServer();
+} else {
+  // Sur Vercel, on se connecte à la DB et on exporte l'app (Serverless)
+  connectDB().then(() => {
+    logger.info('DB connectée en Serverless');
+  }).catch(console.error);
+}
+
+module.exports = app;

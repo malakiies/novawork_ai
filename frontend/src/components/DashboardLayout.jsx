@@ -2,7 +2,7 @@ import React from 'react';
 import { Outlet, Link, useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { LogOut, LayoutDashboard, Briefcase, Calendar, Users, Settings } from 'lucide-react';
-import { logout } from '../store/authSlice';
+import { logout } from '../store/slices/authSlice';
 import { NotificationBell } from './NotificationBell';
 
 const navigation = [
