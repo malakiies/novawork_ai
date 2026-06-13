@@ -1,0 +1,34 @@
+# Dépendances Node.js
+node_modules/
+
+# Secrets & Variables d'environnement
+.env
+.env.*
+!.env.example
+
+# Builds et outputs
+dist/
+build/
+coverage/
+.next/
+
+# Fichiers de log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+*.log
+
+# Fichiers système et éditeurs
+.DS_Store
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Uploads locaux
+backend/uploads/
+backend/temp/
